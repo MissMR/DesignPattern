@@ -1,10 +1,12 @@
 package com.mingren.administrator.designpattern.establish.builder;
 
+import java.io.Serializable;
+
 /**
  *  实体
  */
 
-public class BuilderBean {
+public class BuilderBean implements Serializable,Cloneable {
     String name;
     String age;
     String tel;

@@ -8,6 +8,8 @@ import android.widget.ListView;
 
 import com.mingren.administrator.designpattern.establish.builder.BuilderFragment;
 import com.mingren.administrator.designpattern.establish.factory.SimpleFactoryFragment;
+import com.mingren.administrator.designpattern.establish.prototype.PrototypeFragment;
+import com.mingren.administrator.designpattern.structure.adapter.AdapterFragment;
 import com.mingren.lib.baselibrary.basefragment.BaseFragment;
 
 import java.util.ArrayList;
@@ -30,6 +32,8 @@ public class MainFragment extends BaseFragment {
         list.clear();
         list.add("工厂模式");
         list.add("建造者模式");
+        list.add("原型模式");
+        list.add("适配器模式");
     }
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
@@ -47,6 +51,12 @@ public class MainFragment extends BaseFragment {
                         break;
                     case 1:
                         addFragment(new BuilderFragment());
+                        break;
+                    case 2:
+                        addFragment(new PrototypeFragment());
+                        break;
+                    case 3:
+                        addFragment(new AdapterFragment());
                         break;
                 }
             }
