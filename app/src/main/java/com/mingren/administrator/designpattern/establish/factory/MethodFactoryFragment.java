@@ -1,23 +1,22 @@
 package com.mingren.administrator.designpattern.establish.factory;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.mingren.administrator.designpattern.R;
+import com.mingren.administrator.designpattern.modle.American;
+import com.mingren.administrator.designpattern.modle.Chinese;
+import com.mingren.administrator.designpattern.modle.People;
 import com.mingren.lib.baselibrary.basefragment.BaseFragment;
 
 /**
  *   工厂方法模式
+ *   多个工厂，通过不同工厂创建不同子类
  */
 public class MethodFactoryFragment extends BaseFragment {
     Button function,jump;
-    People people;
+    People people;   // 所有子类的父类
     boolean isChinese;
     ClineseFactory clineseFactory = new ClineseFactory();
     AmericanFactory americanFactory = new AmericanFactory();
@@ -53,6 +52,7 @@ public class MethodFactoryFragment extends BaseFragment {
         });
     }
 
+    // 中国人工厂
     class ClineseFactory implements  PeopleFactory{
 
         @Override
@@ -61,6 +61,7 @@ public class MethodFactoryFragment extends BaseFragment {
         }
     }
 
+    // 美国人工厂
     class AmericanFactory implements  PeopleFactory{
 
         @Override

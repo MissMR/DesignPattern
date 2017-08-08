@@ -1,8 +1,6 @@
-package com.mingren.administrator.designpattern.establish.factory;
+package com.mingren.administrator.designpattern.modle;
 
 import android.util.Log;
-
-import com.mingren.lib.baselibrary.utils.ToastUtils;
 
 /**
  * 中国人

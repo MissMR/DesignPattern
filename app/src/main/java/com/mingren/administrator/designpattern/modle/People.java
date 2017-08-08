@@ -1,4 +1,4 @@
-package com.mingren.administrator.designpattern.establish.factory;
+package com.mingren.administrator.designpattern.modle;
 
 /**
  * Created by Administrator on 2017/8/7.

@@ -2,23 +2,25 @@ package com.mingren.administrator.designpattern.establish.factory;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.mingren.administrator.designpattern.R;
+import com.mingren.administrator.designpattern.modle.American;
+import com.mingren.administrator.designpattern.modle.Chinese;
+import com.mingren.administrator.designpattern.modle.People;
 import com.mingren.lib.baselibrary.basefragment.BaseFragment;
 
 /**
  * 抽象工厂模式
+ * 多工厂模式的抽象，父类引用指向子类对象
  */
 public class AbstractFactoryFragment extends BaseFragment {
     Button function;
     People people;
     boolean isChinese;
-    BaseAbstractFactory abstractFactory = new AbstractFactory();
+    BaseAbstractFactory abstractFactory = new AbstractFactory(); //  父类引用指向子类对象
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_abstract_factory;
@@ -42,11 +44,13 @@ public class AbstractFactoryFragment extends BaseFragment {
         });
     }
 
+    // 所有工厂的抽象
     interface BaseAbstractFactory{
         void ChineseSay();
         void AmericanSay();
     }
 
+    // 子类工厂
     class AbstractFactory implements  BaseAbstractFactory{
 
         @Override

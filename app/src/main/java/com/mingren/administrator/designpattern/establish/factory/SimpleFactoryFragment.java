@@ -2,13 +2,13 @@ package com.mingren.administrator.designpattern.establish.factory;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.mingren.administrator.designpattern.R;
+import com.mingren.administrator.designpattern.modle.American;
+import com.mingren.administrator.designpattern.modle.Chinese;
+import com.mingren.administrator.designpattern.modle.People;
 import com.mingren.lib.baselibrary.basefragment.BaseFragment;
 
 /**
@@ -17,8 +17,8 @@ import com.mingren.lib.baselibrary.basefragment.BaseFragment;
  */
 public class SimpleFactoryFragment extends BaseFragment {
     Button function,jump;
-    People people;
-    SimpleFactor simpleFactor = new SimpleFactor();
+    People people;  // 所有子类的父类
+    SimpleFactor simpleFactor = new SimpleFactor();  // 工厂
     boolean isChinese;
     @Override
     protected int getLayoutId() {
@@ -52,7 +52,7 @@ public class SimpleFactoryFragment extends BaseFragment {
         });
     }
 
-
+// 简单工厂，通过传不同参数，创建不同子类
     class SimpleFactor{
         public void say(int type){
             switch (type){

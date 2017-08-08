@@ -1,4 +1,4 @@
-package com.mingren.administrator.designpattern.establish.factory;
+package com.mingren.administrator.designpattern.modle;
 
 import android.util.Log;
 

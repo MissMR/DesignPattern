@@ -3,11 +3,14 @@ package com.mingren.administrator.designpattern;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.mingren.lib.baselibrary.basefragment.AppActivity;
+import com.mingren.lib.baselibrary.basefragment.BaseFragment;
+
+public class MainActivity extends AppActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected BaseFragment getFirstFragment() {
+        return new MainFragment();
     }
+
 }
