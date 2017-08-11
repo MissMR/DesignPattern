@@ -18,6 +18,7 @@ import java.util.List;
 
 /**
  *  适配器模式
+ *  应用场景: 当希望将一个对象转换成满足另一个新接口的对象时
  */
 public class AdapterFragment extends BaseFragment {
     ListView listView ;

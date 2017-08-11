@@ -1,5 +1,6 @@
 package com.mingren.administrator.designpattern.structure.adapter;
 
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -35,5 +36,10 @@ public class CustomListViewAdapter implements ListViewAdapter {
     @Override
     public void notifyDataSetChanged() {
             textView.setText(list.toString());
+    }
+
+    @Override
+    public View getView(int position) {
+        return null;
     }
 }

@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mingren.administrator.designpattern.structure.proxy.StaticProxyFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/b_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="静态代理"
+        />
+
+    <Button
+        android:id="@+id/dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动态代理"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

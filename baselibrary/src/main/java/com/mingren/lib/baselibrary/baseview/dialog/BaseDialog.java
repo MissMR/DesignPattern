@@ -1,7 +1,8 @@
-package com.mingren.lib.baselibrary.baseview;
+package com.mingren.lib.baselibrary.baseview.dialog;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.StyleRes;
 import android.view.View;
 import android.view.WindowManager;
@@ -11,23 +12,28 @@ import android.view.WindowManager;
  */
 
 public abstract class BaseDialog extends AlertDialog {
+    Context context;
     // 设置布局
     public abstract  void initView(Context context);
 
-    protected BaseDialog(Context context, View.OnClickListener listener1, View.OnClickListener listener2, View.OnClickListener listener3) {
+    protected BaseDialog(Context context) {
         super(context);
-        initView(context);
-        this.setCanceledOnTouchOutside(true); //设置点击空白不消失
+        this.context = context;
     }
 
     protected BaseDialog(Context context, boolean cancelable, OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
-        initView(context);
-
+        this.context = context;
     }
 
     protected BaseDialog(Context context, @StyleRes int themeResId) {
         super(context, themeResId);
+        this.context = context;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         initView(context);
     }
 

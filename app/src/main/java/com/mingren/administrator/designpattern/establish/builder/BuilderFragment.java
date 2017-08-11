@@ -10,6 +10,10 @@ import android.widget.TextView;
 import com.mingren.administrator.designpattern.R;
 import com.mingren.lib.baselibrary.basefragment.BaseFragment;
 
+/**
+ *  建造者模式
+ *  应用场景： 创建与描述分离
+ */
 public class BuilderFragment extends BaseFragment implements View.OnClickListener {
 
     TextView exhibition;
