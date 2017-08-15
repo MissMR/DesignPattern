@@ -51,28 +51,8 @@ public class SimpleFactoryFragment extends BaseFragment {
         jump.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new PromptBuilder(getMyActivity())
-                        .setTitle("测试标题")
-                        .setMessage("这是一个对话框，点击确定，提示确定，点击取消，提示取消")
-                        .setOkListener("确认取证",new DialogInterface.OnClickListener() {
-                      @Override
-                      public void onClick(DialogInterface dialogInterface, int i) {
-                          ToastUtils.showToast(getMyActivity(),"确定");
-                          dialogInterface.dismiss();
-                      }
 
-              })
-                        .setCancelListener("取消取证",new DialogInterface.OnClickListener() {
-                      @Override
-                      public void onClick(DialogInterface dialogInterface, int i) {
-                          ToastUtils.showToast(getMyActivity(),"取消");
-                          dialogInterface.dismiss();
-                      }
-
-              }).create();
-
-
-                //addFragment(new MethodFactoryFragment());
+                addFragment(new MethodFactoryFragment());
             }
         });
     }

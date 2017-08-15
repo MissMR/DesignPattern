@@ -11,7 +11,9 @@ import com.mingren.administrator.designpattern.establish.factory.SimpleFactoryFr
 import com.mingren.administrator.designpattern.establish.prototype.PrototypeFragment;
 import com.mingren.administrator.designpattern.structure.adapter.AdapterFragment;
 import com.mingren.administrator.designpattern.structure.adapter.TestMyListViewFragment;
+import com.mingren.administrator.designpattern.structure.bridge.BridgeFragment;
 import com.mingren.administrator.designpattern.structure.decorator.DecoratorFragment;
+import com.mingren.administrator.designpattern.structure.facade.FacadeFragment;
 import com.mingren.administrator.designpattern.structure.proxy.StaticProxyFragment;
 import com.mingren.lib.baselibrary.basefragment.BaseFragment;
 
@@ -39,6 +41,8 @@ public class MainFragment extends BaseFragment {
         list.add("适配器模式");
         list.add("装饰模式");
         list.add("代理模式");
+        list.add("外观模式");
+        list.add("桥接模式");
     }
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
@@ -75,6 +79,13 @@ public class MainFragment extends BaseFragment {
                     case 5:
                         // 代理模式
                         addFragment(new StaticProxyFragment());
+                        break;
+                    case 6:
+                        // 外观模式
+                        addFragment(new FacadeFragment());
+                        break;
+                    case 7:
+                        addFragment(new BridgeFragment());
                         break;
                 }
             }
