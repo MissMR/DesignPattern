@@ -50,9 +50,7 @@ public class DynamicFragment extends BaseFragment {
                     people.say();
                     isChinese = true;
                 }
-
             }
         });
-
     }
 }

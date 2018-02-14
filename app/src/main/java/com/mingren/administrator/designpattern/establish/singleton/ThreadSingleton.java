@@ -7,18 +7,19 @@ package com.mingren.administrator.designpattern.establish.singleton;
 public class ThreadSingleton {
     private static ThreadSingleton threadSingleton = null;
 
-    private  ThreadSingleton(){};
+    private ThreadSingleton() {
+    };
 
     // 为初始化单例加锁
-    private static synchronized  void initThreadSingleton(){
+    private static void initThreadSingleton() {
         threadSingleton = new ThreadSingleton();
     }
 
     // 公有的获取方法
-    public static ThreadSingleton getInstance(){
-        if (threadSingleton == null){
+    public static synchronized ThreadSingleton getInstance() {
+        if (threadSingleton == null) {
             initThreadSingleton();
         }
-        return  threadSingleton;
+        return threadSingleton;
     }
 }

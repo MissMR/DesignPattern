@@ -6,6 +6,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.mingren.administrator.designpattern.behavior.command.CommandFragment;
+import com.mingren.administrator.designpattern.behavior.object.ObserverFragment;
 import com.mingren.administrator.designpattern.establish.builder.BuilderFragment;
 import com.mingren.administrator.designpattern.establish.factory.SimpleFactoryFragment;
 import com.mingren.administrator.designpattern.establish.prototype.PrototypeFragment;
@@ -15,6 +17,7 @@ import com.mingren.administrator.designpattern.structure.bridge.BridgeFragment;
 import com.mingren.administrator.designpattern.structure.decorator.DecoratorFragment;
 import com.mingren.administrator.designpattern.structure.facade.FacadeFragment;
 import com.mingren.administrator.designpattern.structure.proxy.StaticProxyFragment;
+import com.mingren.administrator.designpattern.structure.template.TempateFragment;
 import com.mingren.lib.baselibrary.basefragment.BaseFragment;
 
 import java.util.ArrayList;
@@ -43,6 +46,9 @@ public class MainFragment extends BaseFragment {
         list.add("代理模式");
         list.add("外观模式");
         list.add("桥接模式");
+        list.add("观察者模式");
+        list.add("模板方法");
+        list.add("命令模式");
     }
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
@@ -86,6 +92,15 @@ public class MainFragment extends BaseFragment {
                         break;
                     case 7:
                         addFragment(new BridgeFragment());
+                        break;
+                    case 8:
+                        addFragment(new ObserverFragment());
+                        break;
+                    case 9:
+                        addFragment(new TempateFragment());
+                        break;
+                    case 10:
+                        addFragment(new CommandFragment());
                         break;
                 }
             }
